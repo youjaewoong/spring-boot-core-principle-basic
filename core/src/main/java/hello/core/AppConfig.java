@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
+import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
@@ -17,18 +18,24 @@ public class AppConfig {
 	
 	@Bean
 	public MemberService memberService() {
-		return new MemberServiceImpl(memoryMemberRepository());
+		//1번
+		System.out.println("call AppConfig.memberService");
+		return new MemberServiceImpl(memberRepository());
 	}
 	
 	@Bean
 	public OrderService orderService() {
+		//1번
+		System.out.println("call AppConfig.orderService");
 		return new OrderServiceImpl(
-				memoryMemberRepository(),
+				memberRepository(),
 				discountPolicy());
 	}
 	
 	@Bean
-	public MemoryMemberRepository memoryMemberRepository() {
+	public MemberRepository memberRepository() {
+		//2번? 3번?
+		System.out.println("call AppConfig.memberRepository");
 		return new MemoryMemberRepository();
 	}
 	
