@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Provider;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,8 @@ public class SingletonWithPrototypeTest1 {
 	}
 
 	@Test
-	@DisplayName("싱글톤 컨테이너에 프로토타입을 사용 할 경우 같은 객체를 재사용한다.")
+	@DisplayName("싱글톤 컨테이너에 프로토타입을 사용 할 경우 같은 객체를 재사용한다."
+			+ "하지만 provider 를 사용하면 dl 을 통해 새로운 객체를 생성을 해준다.")
 	void singletonClientUsePrototype() {
 		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(ClientBean.class, PrototypeBean.class);
 		
@@ -36,19 +38,25 @@ public class SingletonWithPrototypeTest1 {
 		
 		ClientBean clientBean2 = ac.getBean(ClientBean.class);
 		int count2 = clientBean2.logic();
-		assertThat(count2).isEqualTo(2);
+		assertThat(count2).isEqualTo(1);
 	}
 	
 	@Scope("singleton")
 	static class ClientBean {
+		
+		/*
 		private final PrototypeBean prototypeBean; //생성시점에 주입
 		
 		@Autowired
 		public ClientBean(PrototypeBean prototypeBean) {
 			this.prototypeBean = prototypeBean;
 		}
+		*/
+		@Autowired
+		private Provider<PrototypeBean> provider;
 		
 		public int logic() {
+			PrototypeBean prototypeBean = provider.get();
 			prototypeBean.addCount();
 			int count = prototypeBean.getCount();
 			return count;
