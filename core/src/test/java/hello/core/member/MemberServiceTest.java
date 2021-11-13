@@ -3,6 +3,7 @@ package hello.core.member;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import hello.core.AppConfig;
@@ -21,6 +22,7 @@ class MemberServiceTest {
 	}
 	
 	@Test
+	@DisplayName("맴버객체 TEST")
 	void join() {
 		//given
 		Member member = new Member(1L, "memberA", Grade.VIP);

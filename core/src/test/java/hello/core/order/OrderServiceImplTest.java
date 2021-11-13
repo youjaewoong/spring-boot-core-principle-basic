@@ -3,6 +3,7 @@ package hello.core.order;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import hello.core.discount.FixDiscountPolicy;
@@ -13,6 +14,7 @@ import hello.core.member.MemoryMemberRepository;
 class OrderServiceImplTest {
 
 	@Test
+	@DisplayName("주문생성 TEST")
 	void createOrder() {
 		MemoryMemberRepository memberRepository = new MemoryMemberRepository();
 		memberRepository.save(new Member(1L, "name", Grade.VIP));

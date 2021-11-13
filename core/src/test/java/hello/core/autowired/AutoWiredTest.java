@@ -2,6 +2,7 @@ package hello.core.autowired;
 
 import java.util.Optional;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,6 +13,7 @@ import hello.core.member.Member;
 public class AutoWiredTest {
 
 	@Test
+	@DisplayName("@Autowired TEST")
 	void AutowiredOption() {
 		 AnnotationConfigApplicationContext ac = 
 				 new AnnotationConfigApplicationContext(TestBean.class);

@@ -1,5 +1,6 @@
 package hello.core.scope;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import
 org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -11,6 +12,7 @@ import static org.assertj.core.api.Assertions.*;
 public class PrototypeTest {
 	
 	@Test
+	@DisplayName("scope prototype TEST")
 	public void prototypeBeanFind() {
 		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
 		System.out.println("find prototypeBean1");

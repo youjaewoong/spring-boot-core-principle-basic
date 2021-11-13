@@ -1,6 +1,7 @@
 package hello.core.scan;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +15,7 @@ import static org.springframework.context.annotation.ComponentScan.Filter;
 public class ComponentFilterAppConfigTest {
  
 	@Test
+	@DisplayName("@ComponentScan Filter TEST")
 	void filterScan() {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfig.class);
 		BeanA beanA = ac.getBean("beanA", BeanA.class);
