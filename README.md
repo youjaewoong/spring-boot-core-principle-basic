@@ -1,45 +1,47 @@
-# spring-boot-core-principle-basic
+# spring-core-principle-basic
 스프링 핵심 원리 - 기본
 
-- AllBeanTest : 전략패턴으로 구현객체 활용 하기
-- AutoWiredTest : @Autowired TEST
-- BeanDefinitionTest : 빈 설정 메타정보 확인
-- ApplicationContextBasicFindTest : 모든 빈 출력하기, 애플리케이션 빈 출력하기
-- ApplicationContextExtendsFindTest : 
+- [AllBeanTest : AnnotationConfigApplicationContext getBean 으로 service 호출 테스트](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/autowired/AllBeanTest.java)
+- [AutoWiredTest : @Autowired TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/autowired/AutoWiredTest.java)
+- [BeanDefinitionTest : 빈으로 설정된 메타정보 확인](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/beandefinition/BeanDefinitionTest.java)
+- [ApplicationContextBasicFindTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/beanfind/ApplicationContextBasicFindTest.java)
+  - 모든 빈 출력하기
+  - 애플리케이션 빈 출력하기
+- [ApplicationContextExtendsFindTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/beanfind/ApplicationContextExtendsFindTest.java)
   - 부모 타입으로 조회시, 자식이 둘 이상 있으면, 중복 오류가 발생한다
   - 부모 타입으로 조회시, 자식이 둘 이상 있으면, 빈 이름을 지정하면 된다
   - 특정 하위 타입으로 조회
   - 부모 타입으로 모두 조회하기
   - 부모 타입으로 모두 조회하기 - Object 
-- ApplicationContextInfoTest
+- [ApplicationContextInfoTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/beanfind/ApplicationContextInfoTest.java)
   - 빈 이름으로 조회
   - 이름 없이 타입만으로 조회
   - 구체 타입으로 조회
   - 빈 이름으로 조회X
-- ApplicationContextSameBeanFindTest
+- [ApplicationContextSameBeanFindTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/beanfind/ApplicationContextSameBeanFindTest.java)
   - 타입으로 조회시 같은 타입이 둘 이상 있으면, 중복 오류가 발생한다
   - 타입으로 조회시 같은 타입이 둘 이상 있으면, 빈 이름을 지정하면 된다
   - 특정 타입을 모두 조회하기
-- RateDiscountPolicyTest
+- [RateDiscountPolicyTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/discount/RateDiscountPolicyTest.java)
   - VIP는 10% 할인이 적용되어야 한다.
   - VIP가 아니면 할인이 적용되지 않아야 한다.
-- BeanLifeCycleTest : 라이프사이클 @PreDestroy, @PostConstruct
-- MemberServiceTest : 맴버객체 TEST
-- OrderServiceImplTest : 주문객체 TEST
-- OrderServiceTest : 주문생성 TEST
-- AutoAppConfigTest : @ComponentScan TEST
-- ComponentFilterAppConfigTest: @ComponentScan Filter TEST
-- PrototypeTest : scope prototype TEST
-- SingletonTest : scope singleton TEST
-- SingletonWithPrototypeTest1
+- [BeanLifeCycleTest : 라이프사이클 @PreDestroy, @PostConstruct](https://github.com/youjaewoong/spring-core-principle-basic/tree/master/core/src/test/java/hello/core/lifecycle)
+- [MemberServiceTest : 맴버객체 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/member/MemberServiceTest.java)
+- [OrderServiceImplTest : 주문객체 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/order/OrderServiceImplTest.java)
+- [OrderServiceTest : 주문생성 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/order/OrderServiceTest.java)
+- [AutoAppConfigTest : @ComponentScan TEST]
+- [ComponentFilterAppConfigTest: @ComponentScan Filter TEST]
+- [PrototypeTest : scope prototype TEST]
+- [SingletonTest : scope singleton TEST]
+- [SingletonWithPrototypeTest1]
   - 프로토타입 스코프는 객체가 다르기 떄문에 서로다른 참조값에서 데이터를 가져온다.
   - 싱글톤 컨테이너에 프로토타입을 사용 할 경우 같은 객체를 재사용한다. 하지만 provider 를 사용하면 dl 을 통해 새로운 객체를 생성을 해준다.
-- ConfigurationSingletonTest
+- [ConfigurationSingletonTest]
   - singleton bean TEST
   - bean 등록 TEST
- - SingletonTest
+ - SingletonTest]
   - 스프링 없는 순수한 DI 컨테이너
   - 싱글톤 패턴을 적용한 객체 사용
   - 스프링 컨테이너와 싱글톤
-- StatefulServiceTest : 객체참조 Stateful TEST
-- XmlAppContext : spring xml TEST
+- [StatefulServiceTest : 객체참조 Stateful TEST]
+- [XmlAppContext : spring xml TEST]
