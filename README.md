@@ -29,19 +29,19 @@
 - [MemberServiceTest : 맴버객체 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/member/MemberServiceTest.java)
 - [OrderServiceImplTest : 주문객체 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/order/OrderServiceImplTest.java)
 - [OrderServiceTest : 주문생성 TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/order/OrderServiceTest.java)
-- [AutoAppConfigTest : @ComponentScan TEST]
-- [ComponentFilterAppConfigTest: @ComponentScan Filter TEST]
-- [PrototypeTest : scope prototype TEST]
-- [SingletonTest : scope singleton TEST]
-- [SingletonWithPrototypeTest1]
+- [AutoAppConfigTest : 의존성 주입 테스트를 통한 @ComponentScan TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/scan/AutoAppConfigTest.java)
+- [ComponentFilterAppConfigTest: @ComponentScan Filter TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/scan/ComponentFilterAppConfigTest.java)
+- [PrototypeTest : scope prototype TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/scope/PrototypeTest.java)
+- [SingletonTest : scope singleton TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/scope/SingletonTest.java)
+- [SingletonWithPrototypeTest1](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/scope/SingletonWithPrototypeTest1.java)
   - 프로토타입 스코프는 객체가 다르기 떄문에 서로다른 참조값에서 데이터를 가져온다.
   - 싱글톤 컨테이너에 프로토타입을 사용 할 경우 같은 객체를 재사용한다. 하지만 provider 를 사용하면 dl 을 통해 새로운 객체를 생성을 해준다.
-- [ConfigurationSingletonTest]
+- [ConfigurationSingletonTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/singleton/ConfigurationSingletonTest.java)
   - singleton bean TEST
   - bean 등록 TEST
- - SingletonTest]
+ - [SingletonTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/singleton/SingletonTest.java)
   - 스프링 없는 순수한 DI 컨테이너
   - 싱글톤 패턴을 적용한 객체 사용
   - 스프링 컨테이너와 싱글톤
-- [StatefulServiceTest : 객체참조 Stateful TEST]
-- [XmlAppContext : spring xml TEST]
+- [StatefulServiceTest : 객체참조 Stateful TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/singleton/StatefulServiceTest.java)
+- [XmlAppContext : spring bean xml TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/xml/XmlAppContext.java)
