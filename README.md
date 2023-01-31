@@ -40,8 +40,8 @@
   - singleton bean TEST
   - bean 등록 TEST
  - [SingletonTest](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/singleton/SingletonTest.java)
-  - 스프링 없는 순수한 DI 컨테이너
-  - 싱글톤 패턴을 적용한 객체 사용
-  - 스프링 컨테이너와 싱글톤
+   - 스프링 없는 순수한 DI 컨테이너
+   - 싱글톤 패턴을 적용한 객체 사용
+   - 스프링 컨테이너와 싱글톤
 - [StatefulServiceTest : 객체참조 Stateful TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/singleton/StatefulServiceTest.java)
 - [XmlAppContext : spring bean xml TEST](https://github.com/youjaewoong/spring-core-principle-basic/blob/master/core/src/test/java/hello/core/xml/XmlAppContext.java)
